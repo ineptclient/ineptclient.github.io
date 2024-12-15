@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inept Client - Minecraft 1.21 Utility Client</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #2d2d2d;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .hero h2, .hero p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .features {
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            background-color: #2d2d2d;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 3rem;
+            background-color: #333;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #00ff88;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .download-btn:hover {
+            background-color: #00cc6a;
+        }
+
+        footer {
+            background-color: #2d2d2d;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .features h2 {
+            position: relative;
+            z-index: 2;
+        }
+
+        #particles-js-features {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inept Client</h1>
+        <p>Advanced Minecraft 1.21 Utility Client</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#purchase">Purchase</a></li>
+            <li><a href="https://dsc.gg/inept">Discord</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div id="particles-js"></div>
+        <h2>The penultimate combat utility client</h2>
+        <p>Inept Client is a utility client for Minecraft Fabric 1.21 designed for combat and utility. 
+            Featuring robust and efficient combat modules. Inept gets the job done.</p>
+    </section>
+
+    <section class="features" id="features">
+        <div id="particles-js-features"></div>
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Combat</h3>
+                <p>Advanced combat modules for PvP enhancement</p>
+            </div>
+            <div class="feature-card">
+                <h3>Movement</h3>
+                <p>Enhanced movement capabilities and speed options</p>
+            </div>
+            <div class="feature-card">
+                <h3>Render</h3>
+                <p>Visual improvements and ESP features</p>
+            </div>
+            <div class="feature-card">
+                <h3>Utility</h3>
+                <p>Quality of life improvements and helpful tools</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section" id="purchase">
+        <h2>Download Inept Client</h2>
+        <p>Latest version: 1.0.0 for Minecraft 1.21</p>
+        <a href="#" class="download-btn">Purchase Now</a><br>
+        <i style="color: darkgray;">Inept Client beta is unavailable for purchase currently. Expected release date: Early January 2025</i>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Inept Client. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            particlesJS('particles-js', {
+                particles: {
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: '#00ff88'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false
+                    },
+                    size: {
+                        value: 3,
+                        random: true
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00ff88',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'bounce',
+                        bounce: true
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'repulse'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+
+            particlesJS('particles-js-features', {
+                particles: {
+                    number: {
+                        value: 40,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: '#00ff88'
+                    },
+                    shape: {
+                        type: 'circle'
+                    },
+                    opacity: {
+                        value: 0.3,
+                        random: false
+                    },
+                    size: {
+                        value: 2,
+                        random: true
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00ff88',
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1.5,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'bounce',
+                        bounce: true
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: 'repulse'
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: 'push'
+                        },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+</body>
+</html>
